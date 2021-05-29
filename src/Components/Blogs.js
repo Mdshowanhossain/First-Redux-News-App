@@ -7,7 +7,7 @@ import "../styling/blogs.css";
 
 const Blogs = () => {
   const searchInput = useSelector(selectUserInput);
-  const blog_url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=810c3dce266a492c8337ae5ea8e21168`;
+  const blog_url = `https://newsapi.org/v2/top-headlines?country=${searchInput}us&apiKey=810c3dce266a492c8337ae5ea8e21168`;
   const dispatch = useDispatch();
   const [blogs, setBlogs] = useState();
 
@@ -28,7 +28,7 @@ const Blogs = () => {
 
   return (
     <div className="blog__page">
-      <h1 className="blog__page__header">Blogs</h1>
+      <h1 className="blog__page__header">News</h1>
       {loading ? <h1 className="loading">Loading...</h1> : ""}
       <div className="blogs">
         {blogs?.articles?.map((blog) => (
@@ -47,7 +47,7 @@ const Blogs = () => {
 
         {blogs?.totalArticles === 0 && (
           <h1 className="no__blogs">
-            No blogs available 😞. Search something else to read blogs on the
+            No blogs available. Search something else to read blogs on the
             greatest platform.
           </h1>
         )}

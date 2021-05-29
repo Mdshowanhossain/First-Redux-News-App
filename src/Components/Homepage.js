@@ -1,3 +1,4 @@
+import { Button } from "@material-ui/core";
 import React from "react";
 import GoogleLogin from "react-google-login";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,12 +24,7 @@ const Homepage = () => {
     <div className="home__page" style={{ display: isSignedIn ? "none" : "" }}>
       {!isSignedIn ? (
         <div className="login__message">
-          <h2>📗</h2>
-          <h1>A Readers favourite place!</h1>
-          <p>
-            We provide high quality online resource for reading blogs. Just sign
-            up and start reading some quality blogs.
-          </p>
+          <h1>Let’s go Read Some News </h1>
           <GoogleLogin
             clientId="182651050039-d22qcqlslfju3afsgilan5aieaombkdm.apps.googleusercontent.com"
             render={(renderProps) => (
@@ -49,6 +45,7 @@ const Homepage = () => {
       ) : (
         ""
       )}
+
     </div>
   );
 };

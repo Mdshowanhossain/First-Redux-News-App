@@ -24,9 +24,10 @@
   line-height: 1em;
   margin: 10px auto;
   margin-top: 0;
+  margin-bottom: 100px;
   font-weight: 900;
   letter-spacing: -4px;
-  color: rgb(17, 17, 17);
+  color: #999999;
   text-decoration: underline;
 }
 
@@ -43,7 +44,8 @@
   margin: 15px auto 0px auto;
   padding: 15px 0;
   border: none;
-  background: rgb(17, 17, 17);
+  background: #999999;
+  border-radius: 5px;
   font-family: "Inter";
   color: white;
   font-size: 15px;
